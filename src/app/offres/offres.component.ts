@@ -16,17 +16,14 @@ export class OffresComponent implements OnInit {
   constructor(private offreService : OffreServiceService , private postuleService : PostuleServiceService) { }
 
   ngOnInit(): void {
-
-  }
-
-getOffres(){
     this.offreService.findAll().subscribe({
       next : (data) => {
         this.offres = data;
         console.log(data);
       }
     })
-}
+  }
+
 apply(offre_id : any,candidat_id : any){
     this.postule!.offre_id = offre_id;
     this.postule!.candidat_id = candidat_id;

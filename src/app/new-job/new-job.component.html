@@ -19,9 +19,6 @@
       <input class="col-md-12" type="text" pInputText [(ngModel)]="offre.ville">
     </div>
     <div class="row">
-      <label>Description </label>
-    </div>
-    <div class="row">
       <label>Candidat </label>
     </div>
     <div class="row">
@@ -33,5 +30,6 @@
     <div class="row">
       <input class="col-md-12" type="text" pInputText [(ngModel)]="offre.admin_id">
     </div>
+    <p-button (click)="newOffre()">Submit</p-button>
   </div>
 </div>
