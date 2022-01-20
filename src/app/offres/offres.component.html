@@ -1,0 +1,23 @@
+<div class="container mt-3">
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="bg-info">
+      <tr>
+        <th *ngFor="let key of headers">{{key}}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let offre of offres" >
+        <td>{{offre.description}}</td>
+        <td>{{offre.domaine}}</td>
+        <td>{{offre.ville}}</td>
+        <td><button class="btn btn-success" style="width:100%;height:auto;border-radius: 45px;"
+                    (click)="apply(offre.id,offre.candidat_id)">Apply</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
