@@ -1,1 +1,21 @@
-<p>applied-jobs works!</p>
+<div class="container mt-3">
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="bg-info">
+      <tr>
+        <th *ngFor="let key of headers">{{key}}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let post of postule" >
+        <td>{{post.id}}</td>
+        <td><button>
+                    (click)="deletePost(post.id)">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

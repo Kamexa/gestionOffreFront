@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { OffresComponent } from './offres/offres.component';
 import { NewJobComponent } from './new-job/new-job.component';
 import { AppliedJobsComponent } from './applied-jobs/applied-jobs.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,10 +17,11 @@ import { AppliedJobsComponent } from './applied-jobs/applied-jobs.component';
     NewJobComponent,
     AppliedJobsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

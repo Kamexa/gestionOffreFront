@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {OffreServiceService} from "../controller/services/offre-service.service";
 import {Offre} from "../controller/models/offre";
-import {FormGroup} from "@angular/forms";
+
 
 @Component({
   selector: 'app-new-job',
@@ -9,16 +9,16 @@ import {FormGroup} from "@angular/forms";
   styleUrls: ['./new-job.component.css']
 })
 export class NewJobComponent {
-  postjobForm? :FormGroup;
+
   constructor(private offreService : OffreServiceService) { }
 
+  @Input() offre: Offre = new Offre();
 
   newOffre(){
-    this.offreService.save().subscribe({
-      next : (res) => {
-        console.log(res);
+    this.offreService.save(this.offre).subscribe((data : {}) => {
+      console.log(data);
       }
-    })
+    )
   }
 
 }
